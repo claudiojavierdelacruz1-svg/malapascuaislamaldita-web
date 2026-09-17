@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC&family=Noto+Sans+Devanagari&display=swap');
+
+/* Estilos del menú */
+nav {
+    width: 100%;
+    background-color: rgba(10, 25, 40, 0.9);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #4ECDC4;
+    text-shadow: 0 0 5px #4ECDC4;
+}
+
+.language-selector {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.language-selector select {
+    background-color: transparent;
+    color: #E0E0E0;
+    border: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+}
+
+.language-selector select option {
+    background-color: rgba(10, 25, 40, 0.9);
+    color: #E0E0E0;
+    border: none;
+}
+
+.language-selector select:hover {
+    color: #4ECDC4;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans Devanagari', sans-serif;
+    margin: 0;
+    padding-top: 70px; /* Espacio para el menú fijo */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('malapascua-isla-maldita.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #E0E0E0; /* Gris claro para el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    background-color: rgba(10, 25, 40, 0.85); /* Azul muy oscuro y semitransparente */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+/* Sección de la imagen (portada) */
+.book-cover {
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo para la imagen */
+    margin-right: 40px;
+    text-align: center;
+}
+
+.book-cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.03);
+}
+
+/* Sección del contenido (texto y botón) */
+.content {
+    flex: 2;
+    min-width: 350px; /* Ancho mínimo para el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    color: #4ECDC4; /* Color turquesa para el título */
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #FFC300; /* Color amarillo/dorado para el subtítulo */
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #F0F0F0;
+}
+
+/* Estilos del botón de compra */
+.buy-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #E74C3C; /* Rojo vibrante */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px #C0392B; /* Sombra para efecto 3D */
+    border: none;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #C0392B; /* Rojo más oscuro al pasar el ratón */
+    transform: translateY(2px); /* Efecto de "presionar" */
+    box-shadow: 0 4px #A5362A;
+}
+
+.buy-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 #A5362A;
+}
+
+/* Estilos del botón de contacto */
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #3498DB; /* Azul vibrante */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px #2980B9; /* Sombra para efecto 3D */
+    border: none;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #2980B9; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(2px); /* Efecto de "presionar" */
+    box-shadow: 0 4px #2471A3;
+}
+
+.contact-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 #2471A3;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .book-cover {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .buy-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 500px) {
+    .book-cover img {
+        max-width: 80%;
+    }
+    .content {
+        min-width: auto;
+    }
+}
+
+/* Estilos específicos para la página "La Isla" */
+#isla-container .content section {
+    background-color: rgba(255, 255, 255, 0.05); /* Un fondo muy sutil para las secciones */
+    border: 1px solid #4ECDC4; /* Borde con el color turquesa */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 25px; /* Margen inferior para separar secciones */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+#isla-container table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Bordes colapsados */
+    margin-top: 20px;
+}
+
+#isla-container th, #isla-container td {
+    border: 1px solid #4ECDC4; /* Borde turquesa para celdas */
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+#isla-container thead {
+    background-color: #4ECDC4; /* Fondo turquesa para la cabecera */
+    color: #0A1928; /* Texto oscuro para contraste */
+    font-weight: bold;
+}
+
+#isla-container tbody tr:nth-child(even) {
+    background-color: rgba(78, 205, 196, 0.1); /* Fondo sutil para filas pares */
+}
+
+/* Estilos específicos para la página "El Autor" (Estilo Wikipedia) */
+#autor-container h1 {
+    border-bottom: 1px solid #a2a9b1;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+#autor-container h2 {
+    border-bottom: 1px solid #a2a9b1;
+    margin-top: 1em;
+    padding-bottom: 0.25em;
+}
+
+.infobox {
+    float: right;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox th {
+    text-align: left;
+    background-color: rgba(78, 205, 196, 0.2);
+    padding: 5px;
+    width: 40%;
+}
+
+.infobox td {
+    padding: 5px;
+}
+
+.infobox .infobox-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #4ECDC4;
+    text-align: center;
+    background-color: rgba(78, 205, 196, 0.3);
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+    .infobox {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* Galería de imágenes */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid rgba(78, 205, 196, 0.3);
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-color: #4ECDC4;
+}
+
+@media (max-width: 600px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    .image-gallery img {
+        height: 120px;
+    }
+}
