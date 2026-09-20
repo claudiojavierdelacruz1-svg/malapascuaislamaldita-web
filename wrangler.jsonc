@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-worker-name",
+  "main": "src/index.ts", // Path to your main entry file (e.g., src/index.js or src/index.ts)
+  "compatibility_date": "2026-09-18"
+}
