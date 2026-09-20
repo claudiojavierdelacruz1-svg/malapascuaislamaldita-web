@@ -1,6 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "my-worker-name",
-  "main": "index.html", // Path to your main entry file (e.g., src/index.js or src/index.ts)
-  "compatibility_date": "2026-09-18"
+  "compatibility_date": "2026-09-18",
+  "assets": {
+    "directory": "./" // Points to where index.html and your CSS files live (e.g., "./" for root, or "./public" / "./dist")
+  }
 }
